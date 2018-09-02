@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imagens/favicon.png">
+    <link rel="icon" href="favicon.png">
     <title>Sustenta Lixo</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
             <h1 class="titulo">Sustenta Lixo</h1>
             <div class="col-md-6 formulario">
-                <form>
+                <form method="post" action="registra_usuario.php">
                     <div class="form-group" action="">
                         <label for="nome"><strong>Nome completo*:</strong></label>
                         <input type="text" class="form-control" id="nome" name="nome">
@@ -26,7 +26,7 @@
                     </div>
                     <div class="form-group">
                         <label for="cpf"><strong>CPF (Apenas números)*</strong></label>
-                        <input type="email" class="form-control" id="cpf" name="cpf">
+                        <input type="text" class="form-control" id="cpf" name="cpf">
                     </div>
                     <div class="form-group">
                         <label for="senha"><strong>Senha*</strong></label>
@@ -36,9 +36,6 @@
                 </form>
             </div>
         </div>
-        <footer>
-            <span class="col-md-6">Copyright © 2018 Sustenta Lixo Todos os direitos reservados.</span>
-        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

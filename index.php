@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="imagens/favicon.png">
+    <link rel="icon" href="favicon.png">
     <title>Sustenta Lixo</title>
 </head>
 <body>
@@ -16,26 +16,23 @@
             <h1 class="titulo">Sustenta Lixo</h1>
             <div class="row">
                 <div class="col-md-6 formulario">
-                    <h3 style="text-align: center;">Acessar painel</h3>
-                    <form>
+                    <h3 style="text-align: center; margin-bottom: 25px;">Acessar painel</h3>
+                    <form method="post" action="validar_acesso.php">
                         <div class="form-group" action="">
-                            <span class="fas fa-user"></span><label for="cpf" style="margin: 0px 5px;"><h5>CPF (Apenas números)</h5></label>
-                            </span><input type="email" class="form-control" id="cpf" name="cpf">
+                            <span class="fas fa-user"></span><label for="cpf" style="margin: 0px 5px;"><h5>CPF (Apenas números):</h5></label>
+                            <input type="text" class="form-control" id="cpf" name="cpf">
                         </div>
                         <div class="form-group">
-                            <span class="fas fa-key"></span><label for="senha" style="margin: 0px 5px;"><h5>Senha</h5></label>
+                            <span class="fas fa-key"></span><label for="senha" style="margin: 0px 5px;"><h5>Senha:</h5></label>
                             <input type="password" class="form-control" id="senha" name="senha">
                         </div>
                         <button type="submit" class="btn btn-outline-success btn-lg btn-block" style="margin-bottom: 15px;">Entrar</button>
-                        <a href="cadastro.html" class="btn btn-success btn-lg btn-block">Cadastrar-se</a>
+                        <a href="cadastro.php" class="btn btn-success btn-lg btn-block">Cadastrar-se</a>
                     </form>
-                    <a href="recuperar.html" style="color: green; text-align: center; display:block;">Esqueceu sua senha?</a>
+                    <a href="recuperar.php" style="color: green; text-align: center; display:block;">Esqueceu sua senha?</a>
                 </div>
             </div>
         </div>
-        <footer>
-            <span class="col-md-6">Copyright © 2018 Sustenta Lixo Todos os direitos reservados.</span>
-        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
