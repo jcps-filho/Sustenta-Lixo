@@ -13,24 +13,24 @@
 <body>
     <div class="col-md-6 fundo">
         <div class="container">
-            <h1 class="titulo">Sustenta Lixo</h1>
+           <h1 class="titulo">Sustenta Lixo</h1>
             <div class="col-md-6 formulario">
                 <form method="post" action="registra_usuario.php">
                     <div class="form-group" action="">
                         <label for="nome"><strong>Nome completo*:</strong></label>
-                        <input type="text" class="form-control" id="nome" name="nome">
+                        <input type="text" class="form-control" id="nome" name="nome" required>
                     </div>
                     <div class="form-group">
                         <label for="email"><strong>Email*:</strong></label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="cpf"><strong>CPF (Apenas números)*</strong></label>
-                        <input type="text" class="form-control" id="cpf" name="cpf">
+                        <input type="text" class="form-control" id="cpf" name="cpf" required>
                     </div>
                     <div class="form-group">
                         <label for="senha"><strong>Senha*</strong></label>
-                        <input type="password" class="form-control" id="senha" name="senha">
+                        <input type="password" class="form-control" id="senha" name="senha" required>
                     </div>
                     <button type="submit" class="btn btn-success btn-lg btn-block" style="margin-bottom: 15px;">Cadastrar</button>
                 </form>

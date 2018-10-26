@@ -1,21 +1,12 @@
 <?php
 
-    require_once('db.class.php');
+    session_start();
 
-    $nome =  $_POST['nome'];
-    
-    $email = $_POST['email'];
-
-    $cpf = $_POST['cpf'];
-    
-    $senha = $_POST['senha'];
-
-    $objDB = new db();
-    $link = $objDB->conecta_mysql();
-
-    $sql = "INSERT INTO usuarios (nome, email, cpf, senha) values ('$nome', '$email', '$cpf', '$senha');";
-
+    if(!isset($_SESSION['cpf'])){
+        header('Location: index.php?erro=1');
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,24 +16,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="images/favicon.png">
     <title>Sustenta Lixo</title>
 </head>
 <body>
     <div class="col-md-6 fundo">
         <div class="container">
             <h1 class="titulo">Sustenta Lixo</h1>
+            <h3 style="color: green; text-align: center; font-size: 50px; padding-top: 30px;">Sua pontuação:</h3>
+            <h1 style="text-align: center; font-size: 60px;"><?php echo $_SESSION['pontos']; ?></h1>
+            <h4 style="margin-top: 100px;">Utilize seus pontos:</h4>
             <div class="row">
-                <?php
-                    //executar a query
-                    if(mysqli_query($link, $sql)){
-                        echo '<span style="font-size: 20px;">Usuário registrado com sucesso!</span>';
-                    } else {
-                        echo '<span style="font-size: 20px;">Erro ao registrar o usuário!</span>';
-                    }
-                ?>
-                <br>
-                <a href="index.php" class="btn btn-success btn-lg">Acessar Painel</a>
+                <img src="images/aetc.png" alt="" class="img-fluid" style="margin: 40px 100px 0px 85px;">
+                <img src="images/saraiva.jpg" alt="" class="img-fluid" style="height: 174px; margin: 0px 70px;">
+            </div>
+            <div class="row">
+                <p style="text-align: center; margin-left: 100px;">Recaregue seu cartão de passagem</p>
+                <p style="text-align: center; margin-left: 40px; ">Compre livros com desconto</p>
             </div>
         </div>
     </div>
